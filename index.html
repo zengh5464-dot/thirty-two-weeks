@@ -633,7 +633,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
   html{scroll-behavior:auto}
   .rise{opacity:1;transform:none;transition:none}
   .h-cue::after{animation:none}
-  *{transition-duration:.01ms !important;animation-duration:.01ms !important}
+  *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important}
 }
 @media print{
   #nav,#prog,#aurora,#grain,#pal,.h-cue,.npal,.ptools,.fchips,.gstat,.tick{display:none !important}
@@ -641,8 +641,17 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
   :root,html[data-theme="dark"],html[data-theme="light"],.act{
     --bg:#fff;--bg-2:#fff;--ink:#000;--ink-2:#333;--ink-3:#555;
     --line:rgba(0,0,0,.2);--line-soft:rgba(0,0,0,.1);--card-solid:#fff;
-    --chip-bg:rgba(0,0,0,.06);--acc:#0055c0;--acc-soft:rgba(0,85,192,.1);
+    --chip-bg:rgba(0,0,0,.06);--acc:#0055c0;--acc-hi:#0055c0;--acc-soft:rgba(0,85,192,.1);
+    --code-bg:rgba(0,0,0,.05);
     --warn:#8a5400;--warn-bg:rgba(160,110,20,.12);--ok:#116636;--sel:transparent}
+  .h-title .grad,h2.d1 .grad,.slogan em,.bignum b{background:none !important;
+    -webkit-text-fill-color:currentColor !important;color:#0055c0}
+  .wgrid .wcell{border:1px solid #bbb;color:#000 !important;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .prob .bar{border:1px solid #bbb}
+  .prob .bar i{background:#0055c0 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .wk{display:block !important}
+  .wcell.dim{opacity:1 !important}
   body,.act{background:#fff;color:#000}
   .rise{opacity:1 !important;transform:none !important}
   .lg{background:#fff;box-shadow:none;border:1px solid #ddd;-webkit-backdrop-filter:none;backdrop-filter:none}
@@ -684,7 +693,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
     </div>
     <div class="h-stats">
       <div class="stat"><b data-cnt="32">0</b><span>周基础课程</span></div>
-      <div class="stat"><b data-cnt="816">0</b><span>天到 MIT EA</span></div>
+      <div class="stat"><b data-cnt="816">0</b><span>天到 MIT 早申 EA</span></div>
       <div class="stat"><b data-cnt="13">0</b><span>所目标校</span></div>
       <div class="stat"><b data-cnt="9">0</b><span>个强制闸门</span></div>
       <div class="stat"><b>Fall <i>2029</i></b><span>入学目标</span></div>
@@ -720,7 +729,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
         <ul>
           <li>但资格不等于批准：<strong>214(b) 移民倾向推定</strong>是自由裁量的</li>
           <li>中国籍学生的审批存在你控制不了的地缘变量</li>
-          <li>处理方式：标 UNRESOLVED，进 2027-07-15 可行性门，不投入情绪成本</li>
+          <li>处理方式：标 UNRESOLVED，进 2027-07-15 可行性门（第 11 章 G7），不投入情绪成本</li>
         </ul>
       </div>
       <div class="card lg rise">
@@ -729,7 +738,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
         <p>「顶尖大学讨厌 GED」这句话半对。准确版本是：GED 单独出现时非常弱，但招生官看的是一整套外部验证。GED 只负责证明入学资格，学术证据由另外五项提供。</p>
         <ul>
           <li>六门 AP 5 分 — 外部学科验证</li>
-          <li>八门外部大学课程的正式成绩单（UC Berkeley Extension + HES 合计八门）</li>
+          <li>八门外部大学课程的正式成绩单 — UC Berkeley Extension 与 Harvard Extension School（HES）合计八门</li>
           <li>SAT 1550+，数学 800 — 能力标尺</li>
           <li>HES 课程教授的推荐信 — 有对比基数的第三方评价</li>
           <li>可复现的独立研究 — 不可替代的差异化</li>
@@ -754,6 +763,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
 
     <div class="qbox lg rise" style="margin-top:60px">
       <p class="who">Claude 的定位说明</p>
+      <p class="note" style="margin-bottom:14px">本文件由本人制定；Claude 是复核它的 AI 顾问。凡这种框里的话都是 Claude 的意见，采纳与否由本人决定。</p>
       <p>将本计划定义为「唯一出路」在策略上不成立。一个把失败后果设定为无可退路的计划存在结构缺陷：它使执行者在压力下倾向于做出高风险决策，并在结果不利时缺乏可承接的替代路径。</p>
       <p>第 13 章的概率口径与 2027-07-15 中期审计门（可行性门）均已承认失败的可能性。这两项不是悲观设定，而是使计划在结果不利时仍具备结构完整性的必要条款。真正的问题不是「进不去怎么办」，而是<strong>「进不去的那个版本的我，是不是也值得成为」</strong>。</p>
       <p>把它当成「唯一出路」，你会在 2027 年 12 月的某个晚上做出很糟的决定。把它当成「目前最想要的那条路」，你会走得更远。</p>
@@ -768,7 +778,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
   <div class="rail">
     <p class="eyebrow rise">02 · 执行契约</p>
     <h2 class="d1 rise" id="h02">强度按任务定<br><span class="grad">睡眠是唯一不动的线</span></h2>
-    <p class="lead rise">原 V8.2+ 的 48 小时封闭预算已取消。学习时长由每周实际任务量决定，随阶段递增。下列第四项为不可调整项，依据见该项说明。</p>
+    <p class="lead rise">本版不设每周时长上限——学习时长由每周实际任务量决定，随阶段递增。下列第四项为不可调整项，依据见该项说明。</p>
 
     <div class="grid4" style="margin-top:50px">
       <div class="card lg rise">
@@ -795,7 +805,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
 
     <div class="qbox lg rise" style="margin-top:40px">
       <p class="who">关于「强度不够」</p>
-      <p>强度不是每天坐了几小时，是<strong>每周有多少条内容通过了闭卷复测</strong>。2026 年 3 月的基线测试显示：已学至 Lecture 20+ 但无法独立复现商法则——该次投入的时间并不少，失败原因在于编码方式而非时长。</p>
+      <p>强度不是每天坐了几小时，是<strong>每周有多少条内容通过了闭卷复测</strong>。2026 年 3 月的基线测试显示：18.01 已看至 Lecture 20+，闭卷却推不出商法则——该次投入的时间并不少，失败原因在于编码方式而非时长。</p>
       <p>所以本计划里所有的「增加强度」都落在同一个地方：提高验收难度，缩短复测间隔，扩大交错范围。你可以加时长，但加完之后仍然要过同一条 80% 闭卷线。</p>
     </div>
 
@@ -810,14 +820,15 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
           <tr><td>P3</td><td>W17–W24 · 2026-11 → 2027-01</td><td>把 Transformer 变成可解剖的对象</td><td><strong>70h</strong>/周</td></tr>
           <tr><td>P4</td><td>W25–W32 · 2027-01 → 03</td><td>旗舰实验与冻结</td><td><strong>72h</strong>/周</td></tr>
           <tr><td>P5</td><td>冲刺期 · 2027-03 → 07</td><td>AP · SAT · 研究修复</td><td><strong>69h</strong>/周</td></tr>
-          <tr><td>P6</td><td>申请季 · 2028-08 → 2029-01<small>2027-08 → 2028-07 属第二年纵深段，负载见第 05 章</small></td><td>文书 · 一致性核验 · 课程不停</td><td><strong>61h</strong>/周</td></tr>
+          <tr><td>纵深</td><td>2027-08 → 2028-07</td><td>第二年 PhD Track — 六门研究生级课程与两条研究线</td><td>见第 05 章</td></tr>
+          <tr><td>P6</td><td>申请季 · 2028-08 → 2029-01</td><td>文书 · 一致性核验 · 课程不停</td><td><strong>61h</strong>/周</td></tr>
         </tbody>
       </table>
     </div>
     <p class="tswipe">← 横向滑动查看完整表格 →</p>
 
     <div class="callout rise" style="margin-top:30px">
-      <strong>与外部大学课程的合并口径。</strong>上表为自学部分的时间分配。自 2026 年秋起每学期并行一门大学课程，实际投入 10–15 小时/周，须从自学部分等额扣减，而非叠加。合并后每周总量维持在 70–75 小时区间，自学部分相应降至 55–60 小时。<br><br><strong>日期不变。</strong>周表、闸门与硬截止全部不顺延；某周课程讲次未完成的，溢出至 P5 冲刺期补收，验收标准不降。总内容量不变，仅密度重新分配。
+      <strong>与外部大学课程的合并口径。</strong>上表为自学部分的时间分配。自 2026 年秋起每学期并行一门大学课程，实际投入 10–15 小时/周，须从自学部分等额扣减，而非叠加。合并后每周总量维持各阶段基准不变（66–72h），自学部分相应让出 10–15 小时。<br><br><strong>日期不变。</strong>周表、闸门与硬截止全部不顺延；某周课程讲次未完成的，溢出至 P5 冲刺期补收，验收标准不降。总内容量不变，仅密度重新分配。
     </div>
   </div>
 </section>
@@ -854,7 +865,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
         <div class="row"><span class="t">17:00–18:40</span><span class="b">深工作块 D · 项目 1<small>First Principles Engine；P2 后段转项目 2 前期调研。</small></span><span class="tag c2">研究 100′</span></div>
         <div class="row"><span class="t">18:40–19:30</span><span class="b">晚餐 + 散步</span><span class="tag">—</span></div>
         <div class="row"><span class="t">19:30–20:30</span><span class="b">深工作块 E · 标化 / 广度自学<small>AP 六科轮换为主，穿插历史社科自学单元与 Extension 课程作业。</small></span><span class="tag c4">标化 60′</span></div>
-        <div class="row"><span class="t">20:30–21:00</span><span class="b">社区与产业合作<small>同一条长期贡献主线 + contribution ledger。</small></span><span class="tag c3">社区 30′</span></div>
+        <div class="row"><span class="t">20:30–21:00</span><span class="b">社区与产业合作<small>同一条长期贡献主线 + contribution ledger（贡献台账 · 第 17 章）。</small></span><span class="tag c3">社区 30′</span></div>
         <div class="row"><span class="t">21:00–21:30</span><span class="b">审计与记录<small>错误账本 + 英文 curiosity log 五句 + 明日计划 + Evidence Index 编号。</small></span><span class="tag">审计 30′</span></div>
         <div class="row"><span class="t">21:30–22:10</span><span class="b">自由 · 不记录、不产出、不为申请表演</span><span class="tag">—</span></div>
         <div class="row"><span class="t">22:10–22:30</span><span class="b">洗漱 · 纸质阅读</span><span class="tag">—</span></div>
@@ -873,7 +884,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
         <div class="row"><span class="t">08:10–10:40</span><span class="b">深工作块 A · 主课 / 论文精读</span><span class="tag c1">课程 150′</span></div>
         <div class="row"><span class="t">10:40–10:55</span><span class="b">休息</span><span class="tag">—</span></div>
         <div class="row"><span class="t">10:55–12:55</span><span class="b">深工作块 B · nanoGPT / ARENA</span><span class="tag c1">课程 120′</span></div>
-        <div class="row"><span class="t">12:55–13:55</span><span class="b">午餐 + 20 分钟小睡</span><span class="tag">—</span></div>
+        <div class="row"><span class="t">12:55–13:55</span><span class="b">午餐 + 20′ 午睡</span><span class="tag">—</span></div>
         <div class="row"><span class="t">13:55–16:25</span><span class="b">深工作块 C · 手推与习题独立作答<small>全程禁 AI。</small></span><span class="tag c1">课程 150′</span></div>
         <div class="row"><span class="t">16:25–16:40</span><span class="b">休息</span><span class="tag">—</span></div>
         <div class="row"><span class="t">16:40–18:40</span><span class="b">深工作块 D · 旗舰研究<small>P3 为 L0 复现与 Superposition Lab，P4 为主实验。</small></span><span class="tag c2">研究 120′</span></div>
@@ -986,7 +997,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
       </div>
       <div class="card lg" style="padding:22px">
         <span class="cnum">02</span>
-        <p style="font-size:13.5px">多元微积分与概率是几何结构分析的直接前置，写进 Research Supplement 的 Methods。纯 NumPy 反向传播证明你不是调包侠。</p>
+        <p style="font-size:13.5px">多元微积分与概率是几何结构分析的直接前置，写进 Research Supplement 的 Methods；反向传播用纯 NumPy 亲手写穿。</p>
         <p style="margin-top:10px"><span class="chip b">18.02</span> <span class="chip b">Stat 110</span> <span class="chip b">CS231n</span></p>
       </div>
       <div class="card lg" style="padding:22px">
@@ -1039,10 +1050,11 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
   <div class="rail">
     <p class="eyebrow rise">05 · 第二年纵深 · PhD Track</p>
     <h2 class="d1 rise" id="h05">32 周只是地基<br><span class="grad">纵深才是申请的正文</span></h2>
-    <p class="lead rise">32 周基础课程结束后至申请提交前的 <strong>85 周</strong>（2027-03-20 → 2028-11-01，其中 03-20 → 07-15 与 P5 冲刺期重叠），占全计划日历跨度近四分之三。排程口径如实声明：<strong>月度里程碑预定 + 季度滚动展开</strong>——每季度最后一个周日的审计中，把下一季度的月度里程碑展开为逐周任务表并入档；两年外的逐周假精度是不诚实的，本档不造。目标不是覆盖更多科目，而是把三件事做到可被外部核验：<strong>研究生级课程的闭卷通过、两条研究线的完整交付、第三方可证实的协作与教学记录</strong>。</p>
+    <p class="lead rise">32 周基础课程结束后至申请提交前的 <strong>85 周</strong>（2027-03-20 → 2028-11-01，其中 03-20 → 07-15 与 P5 冲刺期重叠），占全计划日历跨度近四分之三。排程口径如实声明：<strong>月度里程碑预定 + 季度滚动展开</strong>——每季度最后一个周日的审计中，把下一季度的月度里程碑展开为逐周任务表并入档；两年外的逐周假精度是不诚实的，本档不造。</p>
+    <p class="lead rise" style="margin-top:14px">目标不是覆盖更多科目，而是把三件事做到可被外部核验：<strong>研究生级课程的闭卷通过、两条研究线的完整交付、第三方可证实的协作与教学记录</strong>。</p>
 
     <div class="callout rise" style="margin-top:36px">
-      <strong>PhD Track 升级口径。</strong>本段课程由「研究生课任选其二」升级为完整博士预备轨：6.006 → 18.650 → 6.7900 → 6.7960 → EE364a 与 CMU 10-714（Deep Learning Systems）全修，全部沿用闭卷 ≥80% 验收。10-714 取代原 CS285：从零构建自动微分、算子与训练系统，与 First Principles Engine 谱系直接衔接，对 interpretability 工程能力的边际价值更高（深挖审查组裁定，2026-08-06）。<br><br><strong>负载红线。</strong>单学期在册重课不超过「一门研究生级自学课 + 一门外部学分课」，同一「时段」内多门课须按日历错开（如 2027 春夏：春 = 6.006 + UCB 第二门，夏 = 18.650 + HES 第一门——任意时点仍是 1 + 1）。例外仅两处，均须负载预审：2028 春的 6.7960 + EE364a 并行（2028-01 预审，未通过则 EE364a 顺延至夏季）；2028 夏的 10-714 + 外部两门（2028-05 预审，未通过则第七门顺延至秋季）。课程只选每个领域最好的——不因为「容易验收」而降级选课。
+      <strong>PhD Track 升级口径。</strong>本段课程由「研究生课任选其二」升级为完整博士预备轨：6.006 → 18.650 → 6.7900 → 6.7960 → EE364a 与 CMU 10-714（Deep Learning Systems）全修，全部沿用闭卷 ≥80% 验收。10-714 取代上一版计划中的 CS285（强化学习）：从零构建自动微分、算子与训练系统，与 First Principles Engine 谱系直接衔接，对 interpretability 工程能力的边际价值更高（2026-08-06 复审决策）。<br><br><strong>负载红线。</strong>单学期在册重课不超过「一门研究生级自学课 + 一门外部学分课」，同一「时段」内多门课须按日历错开（如 2027 春夏：春 = 6.006 + UCB 第二门，夏 = 18.650 + HES 第一门——任意时点仍是 1 + 1）。例外仅两处，均须负载预审：2028 春的 6.7960 + EE364a 并行（2028-01 预审，未通过则 EE364a 顺延至夏季）；2028 夏的 10-714 + 外部两门（2028-05 预审，未通过则第七门顺延至秋季）。课程只选每个领域最好的——不因为「容易验收」而降级选课。
     </div>
 
     <div class="tw lg rise" style="margin-top:36px">
@@ -1052,7 +1064,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
           <tr>
             <td>2027 春夏<small>2027-04 → 08</small></td>
             <td><strong>6.006</strong> 算法与数据结构（AI 导向：复杂度、动态规划、图算法、随机化，全部以训练系统与推理管线为载体）；<strong>18.650</strong> 统计理论后半启动；UCB Extension 第二门（同教授连修）；<strong>HES 第一门</strong>（2027 夏 · Deep Learning 方向，TOEFL 达标后启动）</td>
-            <td>研究线 1 投 workshop，按审稿意见修订；研究线 2 自 L0 起步，设为双人协作</td>
+            <td>研究线 1（第 07 章旗舰研究）投 workshop，按审稿意见修订；研究线 2 自 L0 起步（L 等级见第 09 章），设为双人协作</td>
             <td>AP 第一轮（2027-05）；SAT 首考窗口；<strong>TOEFL 首考 2027-04</strong>（HES 注册唯一前置）；Kaggle 第一、二次参赛；教学线启动（2027-04 · 固定学生每周一课）</td>
           </tr>
           <tr>
@@ -1094,12 +1106,12 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
           <tr><td>2027-05</td><td><strong>AP 正式考试（G6）</strong>；SAT 05-01 主考；每科考后 48 小时内复盘归档</td></tr>
           <tr><td>2027-06</td><td>SAT 06-05 补考（如需）；<strong>workshop 投稿（第二里程碑）</strong>；研究线 2 L0 启动：双人分工与署名约定落字入 contribution ledger</td></tr>
           <tr><td>2027-07</td><td><strong>G7 中期审计（07-15）</strong>；公开 v1.0 最终节点；TOEFL 复考（如需）；SPAR 申请材料定稿；Year-2 负载确认</td></tr>
-          <tr><td>2027-08</td><td>SPAR Fall 提交（截止日届时核）；6.7900 秋季跟课准备；HES 第二门注册</td></tr>
+          <tr><td>2027-08</td><td>SPAR Fall 提交（截止日届时核）；<strong>ICLR 2028 CFP 核验</strong>（主会截稿历年在 9 月下旬——若属实，主会版修订立即前置）；6.7900 秋季跟课准备；HES 第二门注册</td></tr>
           <tr><td>2027-09</td><td>6.7900 与 HES② 开课；SPAR 研究期开始（5–8h/周）</td></tr>
           <tr><td>2027-10</td><td>6.7900 期中自组闭卷；<strong>主会投稿窗口开启（第三里程碑起点）</strong>；教学线满 6 个月证据归档</td></tr>
-          <tr><td>2027-11</td><td>ICLR 2028 主会投稿（若 workshop 修订达标）；SPAR 中期 checkpoint</td></tr>
+          <tr><td>2027-11</td><td>主会投稿状态处置：ICLR 2028 已投则跟审稿结果；未赶上则锁定 NeurIPS 2028（约 2028-05 截稿，CFP 届时核）；SPAR 中期 checkpoint</td></tr>
           <tr><td>2027-12</td><td>SPAR Demo Day 与结题；6.7900 期末闭卷 ≥80%；HES② 结课；年度档案冻结</td></tr>
-          <tr><td>2028-01</td><td>6.7960 + EE364a 并行负载预审（唯一例外审查）；MATS 申请材料准备；研究线 2 推进 L2</td></tr>
+          <tr><td>2028-01</td><td>6.7960 + EE364a 并行负载预审（两处例外之一）；MATS 申请材料准备；研究线 2 推进 L2</td></tr>
           <tr><td>2028-02</td><td>6.7960 / EE364a 开课；HES 人文③ 开课；<strong>答辩 1</strong>（可解释性方向质询者，录像）</td></tr>
           <tr><td>2028-03</td><td>主会结果处置（录用→camera-ready；拒稿→按意见修订或转投）；<strong>答辩 2</strong>（工程方向）</td></tr>
           <tr><td>2028-04</td><td>EE364a 期中自组闭卷；Princeton graded written paper 初稿（HES 人文课内产出）；教学线满 12 个月节点</td></tr>
@@ -1214,7 +1226,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
           <li>本月是否只有观看记录，没有独立产出？</li>
           <li>本月是否只有作业，没有闭卷或实时验证？</li>
           <li>本月是否出现大量高分，但评分规则或评分人不清楚？</li>
-          <li>transcript、课程说明、日历与实际证据是否一致？</li>
+          <li>transcript、课程说明、日历与实际证据之间是否存在不一致？</li>
         </ul>
       </div>
     </div>
@@ -1297,7 +1309,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
   <div class="rail">
     <p class="eyebrow rise">08 · 研究时间线</p>
     <h2 class="d1 rise" id="h08">四段式<br><span class="grad">不是单点冻结</span></h2>
-    <p class="lead rise">原计划将研究定于 2027 年 3 月内部冻结，该日期为 Fall 2028 申请周期设计。申请季调整至 2028 年 11 月后，冻结与提交之间将出现 20 个月空置期。此处将冻结重新定义为里程碑，研究在其后持续迭代。</p>
+    <p class="lead rise">冻结是里程碑，不是终点。第一版 2027-03 冻结，申请 2028-11 提交——中间 20 个月不空置：投稿、修订、第二研究线与三次答辩，把研究一直推进到提交前夜。</p>
 
     <div class="miles">
       <div class="mile rise">
@@ -1315,7 +1327,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
       <div class="mile rise">
         <p class="md">2027-09 → 2028-01 · 第三里程碑</p>
         <h4>主会投稿窗口</h4>
-        <p>依据 workshop 审稿意见完成实质性修订后，向 ICLR 2028 或 NeurIPS 2028 主会投稿。第二研究线推进至 L2，形成可公开的中期成果。</p>
+        <p>依据 workshop 审稿意见完成实质性修订后投主会：ICLR 2028（截稿多在 2027-09 下旬，CFP 届时核）或 NeurIPS 2028（约 2028-05）。第二研究线推进至 L2，形成可公开的中期成果。</p>
         <p class="fail">若修订未能解决审稿人指出的核心方法问题，不得强行投递主会。转为继续打磨或投递第二个 workshop。</p>
       </div>
       <div class="mile rise">
@@ -1406,7 +1418,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
       <div class="card lg rise">
         <span class="cnum">① SPAR · 2027 秋</span>
         <h4>远程对齐研究项目 · Supervised Program for Alignment Research</h4>
-        <p>远程 · 兼职 5–40h/周自选 · 3 个月 · 免费 · 含 mech interp 项目 · 官方明示不要求已有研究经历。本计划投入定为 <strong>5–8h/周</strong>：自社区时段（约 4h）与研究维护时段（2–4h）划拨，不新增总量；WIP 口径下占「产业 / 社区贡献主线」名额，期间不另开新合作线。</p>
+        <p>远程 · 兼职 5–40h/周自选 · 3 个月 · 免费 · 含 mech interp 项目 · 官方明示不要求已有研究经历。本计划投入定为 <strong>5–8h/周</strong>：自社区时段（约 4h）与研究维护时段（2–4h）划拨，不新增总量；按第 17 章在制品上限，占「产业 / 社区贡献主线」名额，期间不另开新合作线。</p>
         <ul>
           <li>申请窗口约在 8 月（2026 届口径 08-18 截止；2027 届日期届时以官网为准）——G7 中期审计门同步核验申请就绪度</li>
           <li>申请材料：盲复现包 + workshop 投稿状态 + 论文精读笔记仓库</li>
@@ -1505,7 +1517,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
     </div>
     <div class="qbox lg rise" style="margin-top:22px">
       <p class="who">时间成本</p>
-      <p>协作与社区两项合计每周约 3–4 小时，已包含在既有社区时段内，不额外占用课程或研究时间。该项为全计划中投入产出比最高的部分：<strong>成本接近于零，而所填补的是官方评估清单中明文单列、且此前证据为零的两栏。</strong></p>
+      <p>协作与社区两项合计每周约 3–4 小时，已包含在既有社区时段内，不额外占用课程或研究时间。<strong>成本接近于零，而所填补的是官方评估清单中明文单列、且此前证据为零的两栏。</strong></p>
     </div>
   </div>
 </section>
@@ -1515,7 +1527,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
   <div class="rail">
     <p class="eyebrow rise">11 · 强制验收</p>
     <h2 class="d1 rise" id="h11">九个闸门<br><span class="grad">每个日期绑定交付物 证据 失败动作</span></h2>
-    <p class="lead rise">节点不是装饰，也不是已经完成的状态。起算 2026-08-08 后全部内部闸门顺延三天重排；外部日期（AP、SAT、MIT EA）以官方为准，不随内部日历移动。</p>
+    <p class="lead rise">节点不是装饰，也不是已经完成的状态。内部闸门跟随本档日历；外部日期（AP、SAT、MIT EA）以官方为准，不随内部日历移动。</p>
 
     <div class="tw lg rise" style="margin-top:44px;padding:24px 20px 14px">
       <div id="gantt" role="img" aria-label="2026-08 至 2029-01 全程时间轴：阶段色带、闸门节点与今日位置"></div>
@@ -1605,7 +1617,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
 <section class="sec" id="s12" aria-labelledby="h12">
   <div class="rail">
     <p class="eyebrow rise">12 · 外部大学课程</p>
-    <h2 class="d1 rise" id="h12">八门课 <span class="grad">一次一门</span></h2>
+    <h2 class="d1 rise" id="h12">八门课 <span class="grad">默认一次一门</span></h2>
     <p class="lead rise">课程负担经课时核算后确定为每学期一门，2027 年 5 月后视自学进度评估是否并行第二门。该约束来自可持续性核算，不来自能力判断：单门大学课程实际投入 10–15 小时/周，按第 02 章合并口径从自学部分等额扣减——两门并行要挤占 20–30 小时，自学主线将失守。</p>
 
     <div class="callout rise" style="margin-top:26px">
@@ -1677,7 +1689,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
           <tr><td>MIT</td><td>Early Action<small>2028-11-01</small></td><td>不要求高中毕业证或 GED，homeschool 无单独要求。必须 SAT / ACT。至少三封推荐信（通常 counselor + 两位教师），总数不超过四封。Research Supplement 只交一项。EA 所有考试须在 11-30 前完成</td><td><span class="chip b">CONFIRMED</span><small>官网核验 + 2026-07-31 书面答复；Supplement 口径 UNRESOLVED</small></td></tr>
           <tr><td>UIUC</td><td>Early Action</td><td>2025 CS first-choice major 录取率 7.4%（必须带年份写）。已收到 first-year 资格与 GED 书面确认</td><td><span class="chip b">CONFIRMED</span></td></tr>
           <tr><td>UC Berkeley</td><td>UC 申请<small>11-30</small></td><td>公立系统，早申不受任何限制性条款约束</td><td><span class="chip" style="background:rgba(20,140,90,.12);color:var(--ok)">VERIFIED</span></td></tr>
-          <tr><td>Stanford</td><td>Regular Decision</td><td>入学前须高中毕业证或州 / 国家认可 equivalent。研究论文、writing sample 与外部链接不进入 first-year 档案——研究必须压进 Activities、Essays 与 Additional Information。一生最多三次申请</td><td><span class="chip w">UNRESOLVED</span></td></tr>
+          <tr><td>Stanford</td><td>Regular Decision</td><td>入学前须高中毕业证或州 / 国家认可 equivalent。研究论文、writing sample 与外部链接不进入 first-year 档案——研究必须压进 Activities、Essays 与 Additional Information。一生最多三次申请（此条为 2026-07 核验口径，申请年重核）</td><td><span class="chip w">UNRESOLVED</span></td></tr>
           <tr><td>Harvard</td><td>Regular Decision</td><td>REA 禁止同期向任何美国私立大学早申，与 MIT EA 互斥；本计划已选 MIT EA，故哈佛走 RD。GED 与 first-year 身份已书面确认</td><td><span class="chip b">CONFIRMED</span></td></tr>
           <tr><td>Princeton</td><td>Regular Decision</td><td>2027–28 周期恢复标化要求，Fall 2029 原则上须 SAT / ACT。Graded written paper 须来自中学最后三年英语 / 社科 / 历史，英文原文，附完整题目、成绩与教师评论</td><td><span class="chip" style="background:rgba(20,140,90,.12);color:var(--ok)">VERIFIED</span></td></tr>
           <tr><td>Columbia</td><td>Regular Decision</td><td>2027–28 周期恢复考试要求。无法合理完成考试者可在申请时请求 waiver，不写成绝对无例外</td><td><span class="chip" style="background:rgba(20,140,90,.12);color:var(--ok)">VERIFIED</span></td></tr>
@@ -1697,10 +1709,11 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
       <p class="who">口径声明 · 先读这段再看数字</p>
       <p><strong>「MIT / Stanford 单校 50%–80%+」是本计划的设计目标，不是预测。</strong>它的工程含义是：在每一个可控维度上把证据做到该维度的天花板——学术分位、研究差异化、协作与社区、人格证据、申请表达全部拉满——使剩余的不确定性只来自你无法控制的变量：名额、地缘、评审随机性。没有任何可核验路径能诚实支撑把 50% 写成预测数字；即使全部按验收标准执行，任何一所也不保证录取。这份文件里的每个数字都必须经得起核对，所以下表给出的是 Claude 的主观校准区间，带前提、带年份、带推导依据。</p>
       <p><strong>推导依据（在 32 周 + PhD Track 全部按验收标准执行的前提下）：</strong></p>
-      <p>① 可核验基准：MIT Class of 2029 国际生约 1.96%（6,926 / 136），同档私校国际生 2–4%。<br>② 学术分位：六门 AP 5 + SAT 1550+ + 八门大学课程成绩单，进入申请池最高分位。<br>③ 研究差异化：经外部评审的 workshop 论文、主会投稿、可复现包与三次录像答辩——这套组合在高中申请池中罕见到没有可引的公开统计，这正是差异化本身。<br>④ 结构缺口已补：协作与社区两栏从零到第三方可证实。<br>⑤ 主导残差仍是不可控变量。区间比 V10 上移的唯一原因是 ③ 与 ④ 的证据等级提升，不是乐观情绪。</p>
+      <p>① 可核验基准：MIT Class of 2029 国际生约 1.96%（6,926 / 136），同档私校国际生 2–4%。<br>② 学术分位：六门 AP 5 + SAT 1550+ + 八门大学课程成绩单，进入申请池最高分位。<br>③ 研究差异化：经外部评审的 workshop 论文、主会投稿、可复现包与三次录像答辩——高中申请池无公开统计可引，此处不以数字冒充；其稀缺性由第 14 章对照表逐行支撑。<br>④ 结构缺口已补：协作与社区两栏从零到第三方可证实。<br>⑤ 主导残差仍是不可控变量。区间比 V10 上移的唯一原因是 ③ 与 ④ 的证据等级提升，不是乐观情绪。</p>
     </div>
 
     <div class="prob lg rise" style="margin-top:24px">
+      <div style="font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px">主观校准区间 · 非预测 · 推导见上</div>
       <div class="row"><span class="s">MIT</span><span class="bar"><i data-w="30"></i></span><span class="v">20 – 30%</span></div>
       <div class="row"><span class="s">Stanford</span><span class="bar"><i data-w="18"></i></span><span class="v">10 – 18%</span></div>
       <div class="row"><span class="s">Harvard</span><span class="bar"><i data-w="18"></i></span><span class="v">10 – 18%</span></div>
@@ -1850,7 +1863,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
     <p class="tswipe">← 横向滑动查看完整表格 →</p>
 
     <div class="callout rise" style="margin-top:26px">
-      <strong>这张表的用法。</strong>标「弱」的两行——collaboration 与 community character——是当前全计划回报率最高的地方：它们几乎不花钱，也不占多少时间，但现在接近于零。按 MIT 官网口径，补这两栏的收益高于把研究再推高一档。
+      <strong>这张表的用法。</strong>标「弱」的两行——collaboration 与 community character——正是第 10 章指出的最大结构缺口：它们几乎不花钱，也不占多少时间，但现在接近于零。按 MIT 官网口径，补这两栏的收益高于把研究再推高一档。
     </div>
   </div>
 </section>
@@ -1937,7 +1950,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
           <li>UC Berkeley Extension 4 门 — ¥20,000–28,000<small>以当季课表价核实</small></li>
           <li>AP 六科首轮 ¥8,850<small>¥1,475/科 · 2026 考季官方价</small> + 2028 补考预留 — ¥9,000–15,000</li>
           <li>SAT 3–5 次（$111/次 · 含港澳行程）— ¥10,000–20,000</li>
-          <li>TOEFL 2 次（$283.17/次 · ETS 官方价）— ¥4,200–4,600</li>
+          <li>TOEFL 2 次 — ¥4,200–4,600<small>按 ETS 官方价 $283.17/次折算；人民币现价以 toefl.neea.cn 为准</small></li>
           <li>Kaggle（免费）+ NeurIPS competition track — ¥0–3,000</li>
           <li>旗舰研究云算力上限 $600 — ¥4,300</li>
           <li>13 校申请费与成绩寄送 — ¥10,000</li>
@@ -2173,7 +2186,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
   <div class="rail">
     <p class="eyebrow rise">19 · 与原计划分开列出</p>
     <h2 class="d1 rise" id="h19">Claude 的建议</h2>
-    <p class="lead rise">下面七条不是你的原始条款，是我加的。分开放是为了让你看清哪些是你定的、哪些是我说的——你可以逐条决定要不要采纳。</p>
+    <p class="lead rise">下面七条不是你的原始条款，是我加的。各章已就地标出 Claude 框，这里集中的是七条跨章级建议——你可以逐条决定要不要采纳。</p>
 
     <div style="margin-top:44px;display:grid;gap:18px">
       <div class="card lg rise">
@@ -2216,7 +2229,7 @@ html[data-theme="light"] .wt em,html[data-theme="light"] .wl.hard dt{color:#e049
 
     <div class="qbox lg rise" style="margin-top:36px">
       <p class="who">今天（2026-08-08 · W1 第 1 天）要做的三件事</p>
-      <p>① 发出两封邮件——Pearson VUE 查 GED 大陆考点；向 HES 书面确认英语能力证明要求（不需要 GED）。这两条有外部依赖，控制不了速度，越早越好。<br>② 读 Toy Models of Superposition 的 Abstract 与 Introduction，用中文写 200 字「这篇论文在问什么」。<br>③ 把九个闸门的日期全部抄进日历并设提醒。</p>
+      <p>① 发出两封邮件——Pearson VUE 查 GED 大陆考点；向 HES 书面确认英语能力证明要求（不需要 GED）。这两条有外部依赖，控制不了速度，越早越好。<br>② 读 Toy Models of Superposition 的 Abstract 与 Introduction，用中文写 200 字「这篇论文在问什么」。<br>③ 把九个闸门的日期全部抄进日历并设提醒。<br>传奇没有别的做法——就是把今天这三件做完。</p>
     </div>
   </div>
 </section>
@@ -2433,6 +2446,7 @@ window.__WEEKS__=[
 const WEEKS=window.__WEEKS__||[];
 const yOf=w=>w.n<=21?2026:2027;
 const HARDKEYS=["硬截止","验收","失败动作","学术闸门"];
+const esc=x=>String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
 
 /* ── 渲染 32 周手风琴 ── */
 (function(){
@@ -2448,7 +2462,7 @@ const HARDKEYS=["硬截止","验收","失败动作","学术闸门"];
         </div>
       </summary>
       <dl class="wbody">
-        ${w.rows.map((r,i)=>`<div class="wl${HARDKEYS.includes(r[0])?' hard':''}" data-k="${w.n}:${i}"><button class="tick" aria-label="标记「${r[0]}」为完成" aria-pressed="false"></button><dt>${r[0]}</dt><dd>${r[1]}</dd></div>`).join('')}
+        ${w.rows.map((r,i)=>`<div class="wl${HARDKEYS.includes(r[0])?' hard':''}" data-k="${w.n}:${i}"><button class="tick" aria-label="标记「${esc(r[0])}」为完成" aria-pressed="false"></button><dt>${r[0]}</dt><dd>${r[1]}</dd></div>`).join('')}
       </dl>
     </details>`).join('');
 })();
@@ -2456,7 +2470,7 @@ const HARDKEYS=["硬截止","验收","失败动作","学术闸门"];
 /* ── 热力图 ── */
 (function(){
   const g=document.getElementById('wgrid'); if(!g)return;
-  g.innerHTML=WEEKS.map(w=>`<button class="wcell${w.hard?' hd':''}" data-l="${w.l}" data-n="${w.n}" title="W${w.n} · ${w.t}" aria-label="跳到第 ${w.n} 周">${w.n}<span class="pp" aria-hidden="true"><i></i></span></button>`).join('');
+  g.innerHTML=WEEKS.map(w=>`<button class="wcell${w.hard?' hd':''}" data-l="${w.l}" data-n="${w.n}" title="W${w.n} · ${esc(w.t)}" aria-label="跳到第 ${w.n} 周">${w.n}<span class="pp" aria-hidden="true"><i></i></span></button>`).join('');
   g.addEventListener('click',e=>{
     const c=e.target.closest('.wcell'); if(!c)return;
     const n=+c.dataset.n,el=document.getElementById('wk'+n);
@@ -2582,7 +2596,11 @@ const HARDKEYS=["硬截止","验收","失败动作","学术闸门"];
 const store={
   get(k,d){try{const v=localStorage.getItem('plan32.'+k);if(!v)return d;
     const p=JSON.parse(v);return p&&typeof p==='object'&&!Array.isArray(p)?p:d}catch(e){return d}},
-  set(k,v){try{localStorage.setItem('plan32.'+k,JSON.stringify(v))}catch(e){}}
+  set(k,v){try{localStorage.setItem('plan32.'+k,JSON.stringify(v))}catch(e){
+    if(!store._warned){store._warned=1;
+      const w=document.getElementById('wprog');
+      w&&w.insertAdjacentHTML('beforeend',' · <span style="color:var(--warn)">本机存储不可用，勾选不会保存</span>');}
+  }}
 };
 const SB=matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth';
 window.__resetWkFilter=function(){
@@ -2590,6 +2608,7 @@ window.__resetWkFilter=function(){
   document.querySelectorAll('.wcell').forEach(c=>c.classList.remove('dim'));
   const ch=document.getElementById('fchips');
   ch&&ch.querySelectorAll('.fc').forEach(x=>{const on=x.dataset.f==='all';x.classList.toggle('on',on);x.setAttribute('aria-pressed',String(on));});
+  dispatchEvent(new Event('resize'));
 };
 let PROG=store.get('progress',{});
 let GST=store.get('gates',{});
@@ -2692,7 +2711,7 @@ function paintGates(){gatePainters.forEach(f=>f());}
     f.text().then(t=>{
       try{const d=JSON.parse(t);
         if(d&&typeof d==='object'&&(okObj(d.progress)||okObj(d.gates))){
-          PROG=okObj(d.progress)?d.progress:{};GST=okObj(d.gates)?d.gates:{};
+          PROG=okObj(d.progress)?d.progress:PROG;GST=okObj(d.gates)?d.gates:GST;
           store.set('progress',PROG);store.set('gates',GST);
           paintProgress();paintGates();
         }else alert('文件里没有可识别的进度数据');
@@ -2716,10 +2735,11 @@ function paintGates(){gatePainters.forEach(f=>f());}
   addEventListener('afterprint',()=>{opened.forEach(d=>d.open=false);opened=[];});
 })();
 
-/* ── 全程时间轴 2026-08 → 2029-01 ── */
-(function(){
+/* ── 全程时间轴 2026-08 → 2029-01（可重绘 · 全部本地时区解析） ── */
+function drawGantt(){
   const box=document.getElementById('gantt'); if(!box)return;
-  const t0=Date.parse('2026-08-01'),t1=Date.parse('2029-02-01');
+  const D=s=>Date.parse(s+'T00:00:00');
+  const t0=D('2026-08-01'),t1=D('2029-02-01');
   const W=1160,H=196,L=14,R=14,X=t=>L+(t-t0)/(t1-t0)*(W-L-R);
   const bands=[
     ['32 周基础','2026-08-08','2027-03-19',40,.92],
@@ -2732,16 +2752,16 @@ function paintGates(){gatePainters.forEach(f=>f());}
     ['G8','2028-10-15'],['EA','2028-11-01'],['RD','2029-01-05']];
   const months=[];
   for(let y=2026;y<=2029;y++)for(let m=1;m<=12;m++){
-    const d=Date.parse(`${y}-${String(m).padStart(2,'0')}-01`);
+    const d=D(`${y}-${String(m).padStart(2,'0')}-01`);
     if(d>=t0&&d<=t1&&(m-1)%3===0)months.push([`${y}.${String(m).padStart(2,'0')}`,d]);
   }
   let s=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
   months.forEach(([lab,d])=>{const x=X(d);
     s+=`<line class="tickline" x1="${x}" y1="30" x2="${x}" y2="${H-42}"/><text x="${x+4}" y="${H-28}" font-size="10.5">${lab}</text>`;});
-  bands.forEach(([lab,a,b,y,o])=>{const xa=X(Date.parse(a)),xb=X(Date.parse(b));
+  bands.forEach(([lab,a,b,y,o])=>{const xa=X(D(a)),xb=X(D(b));
     s+=`<rect class="band" x="${xa.toFixed(1)}" y="${y}" width="${(xb-xa).toFixed(1)}" height="15" rx="7.5" fill="var(--acc)" opacity="${o}"/><text x="${(xa+4).toFixed(1)}" y="${y-6}" font-size="10.5" font-weight="600">${lab}</text>`;});
   s+='<g class="gl">';
-  marks.forEach(([lab,d],i)=>{const x=X(Date.parse(d)),yy=104+(i%2)*28;
+  marks.forEach(([lab,d],i)=>{const x=X(D(d)),yy=104+(i%2)*28;
     s+=`<g><title>${lab} · ${d}</title><line x1="${x}" y1="62" x2="${x}" y2="${yy-8}" stroke="var(--acc)" stroke-width="1" opacity=".45"/><circle cx="${x}" cy="${yy-4}" r="3.4" fill="var(--acc)"/><text x="${x}" y="${yy+10}" font-size="10" text-anchor="middle">${lab}</text></g>`;});
   s+='</g>';
   const now=Date.now();
@@ -2749,28 +2769,33 @@ function paintGates(){gatePainters.forEach(f=>f());}
     s+=`<line class="today-line" x1="${x}" y1="20" x2="${x}" y2="${H-42}"/><text x="${x+5}" y="19" font-size="10" fill="#ff5f45" font-weight="600">今天</text>`;}
   s+='</svg>';
   box.innerHTML=s;
-})();
+}
+drawGantt();
 
-/* ── 闸门倒计时徽章 ── */
-(function(){
+/* ── 闸门倒计时徽章（可重绘） ── */
+function paintDues(){
   const dues=['2026-09-03','2026-09-26','2026-12-04','2027-01-18','2027-01-23','2027-03-19','2027-05-15','2027-07-15','2028-10-15'];
   const now=new Date();now.setHours(0,0,0,0);
   document.querySelectorAll('.gate').forEach((g,i)=>{
     if(!dues[i])return;
     const d=new Date(dues[i]+'T00:00:00'),h4=g.querySelector('h4');
     if(!h4)return;
+    h4.querySelectorAll('.due').forEach(x=>x.remove());
     const days=Math.round((d-now)/864e5);
     const s=document.createElement('span');s.className='due'+(days<0?' past':'');
     s.textContent=days>0?`还剩 ${days} 天`:days===0?'就是今天':'节点已过 · 核验状态';
     h4.appendChild(s);
   });
-})();
+}
+paintDues();
 
-/* ── 今天在哪一周 ── */
-(function(){
+/* ── 今天在哪一周（可重绘） ── */
+function paintWnow(){
   const start=new Date('2026-08-08T00:00:00'),now=new Date();now.setHours(0,0,0,0);
   const box=document.querySelector('.wlegend');if(!box)return;
-  const el=document.createElement('div');el.className='wnow';
+  let el=document.querySelector('.wnow');
+  if(!el){el=document.createElement('div');el.className='wnow';box.after(el);}
+  document.querySelectorAll('.wcell.today').forEach(c=>c.classList.remove('today'));
   const diff=Math.round((now-start)/864e5);
   if(diff<0)el.textContent=`距 W1 开始还有 ${-diff} 天 · 2026-08-08 起算`;
   else if(diff<224){const wn=Math.floor(diff/7)+1;
@@ -2778,7 +2803,19 @@ function paintGates(){gatePainters.forEach(f=>f());}
     const c=document.querySelectorAll('.wcell')[wn-1];c&&c.classList.add('today');}
   else if(now<new Date('2027-07-16T00:00:00'))el.textContent='32 周已完成 · P5 冲刺期（AP · SAT · 研究修复）';
   else el.textContent='处于第二年纵深 · PhD Track 段';
-  box.after(el);
+}
+paintWnow();
+
+/* ── 跨午夜自刷新：页面常开时，日期一变四处同步重绘 ── */
+(function(){
+  let day=new Date().toDateString();
+  function tick(){
+    const d=new Date().toDateString(); if(d===day)return; day=d;
+    paintDues(); paintWnow(); drawGantt();
+    if(window.__updToday)window.__updToday();
+  }
+  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')tick();});
+  setInterval(tick,36e5);
 })();
 
 /* ── 周筛选 ── */
@@ -2798,6 +2835,7 @@ function paintGates(){gatePainters.forEach(f=>f());}
       const show=f==='all'||(f==='hd'?!!wd.hard:wd.p===+f);
       c.classList.toggle('dim',!show);
     });
+    dispatchEvent(new Event('resize'));
   });
 })();
 
@@ -2882,8 +2920,8 @@ function paintGates(){gatePainters.forEach(f=>f());}
       if(e.isComposing||e.keyCode===229)return;
       if(e.key==='Escape')close();
       else if(e.key==='Tab')e.preventDefault();
-      else if(e.key==='ArrowDown'){e.preventDefault();idx=Math.min(idx+1,rows.length-1);paint();}
-      else if(e.key==='ArrowUp'){e.preventDefault();idx=Math.max(idx-1,0);paint();}
+      else if(e.key==='ArrowDown'){e.preventDefault();if(!rows.length)return;idx=Math.min(idx+1,rows.length-1);paint();}
+      else if(e.key==='ArrowUp'){e.preventDefault();if(!rows.length)return;idx=Math.max(idx-1,0);paint();}
       else if(e.key==='Enter')go();
     }
   });
